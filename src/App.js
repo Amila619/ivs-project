@@ -22,9 +22,10 @@ function App() {
           <img src={Bell} alt='' />
           <img src={User} alt='' />
           <select name='status' className='user-logged'>
-            <option value="Thushara Lakshan">Thushara Lakshan</option>
+            <option value="Thushara Priyadarshana">Thushara Priyadarshana</option>
             <option value="Amila Sandeepa">Amila Sandeepa</option>
-            {/* <option value="">Thushara Lakshan</option> */}
+            <option value="Nismal Saumya">Nismal Saumya</option>
+            <option value="Pameeshika Maduhansi">Pameeshika Maduhansi</option>
           </select>
         </div>
       </header>
