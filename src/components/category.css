@@ -13,20 +13,19 @@
 .appContainer1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column: 2;
     padding: 0.5rem;
     border-bottom: 2px solid #d1c5c5be;
 }
 
 .h1Container {
-    display: flex;
-
     grid-column: 1;
-    
+    font-size: 35px;
+    /* margin-right: 250px; */
 }
 
 h3 {
-    font-size: 28px;
+    margin: auto 20px;
+    text-align: justify;
     font-family: Poppins;
     font-weight: 800;
 
@@ -34,18 +33,24 @@ h3 {
 
 .ButtContainer {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3;
 }
 
 .btn {
-    padding: 0.5rem;
-    width: 10rem;
+    font-display: inherit;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
     border-radius: 10px;
     color: #4955A1;
     font-size: 20px;
     font-weight: 800;
     font-family: Poppins;
-    border: 3px solid #000000;
     background-color: #ffffff;
+    border-color: #000000;
+    border-width: 3px;
 }
 
 .btn-wrapper {
