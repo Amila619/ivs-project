@@ -18,17 +18,17 @@ export default function Modal({closeModal}) {
         <form>
           <div className="form-group top ">
             <label className="input-label">ID</label>
-            <input name="page" value="#001" className="customer-text" />
+            <input name="page" defaultValue="#001" className="customer-text" />
           </div>
           <div className="form-group">
             <label className="input-label">Name</label>
-            <input name="page" value="Book" className="customer-text" />
+            <input name="page" defaultValue="Book" className="customer-text" />
           </div>
           <div className="form-group bottom">
             <label className="input-label">Description</label>
             <textarea
               name="description"
-              value="Stationary Items"
+              defaultValue="Stationary Items"
               className="customer-text"
             />
           </div>
