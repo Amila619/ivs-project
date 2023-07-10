@@ -35,6 +35,7 @@
 }
 
 .main-container .left-container{
+  padding: 1rem;
   height: 100%;
 }
 
@@ -65,7 +66,7 @@
 }
 
 .down{
-  margin-bottom: 6.1rem;
+  margin-bottom: 7.3rem;
 }
 
 .inner-box-text {
