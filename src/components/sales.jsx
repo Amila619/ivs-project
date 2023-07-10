@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./sales.css";
+import "./category.css";
 import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
@@ -73,23 +73,30 @@ export default function Sales() {
               <th>Name</th>
               <th>Item</th>
               <th>Quantity</th>
-              <th>Price Rs.</th>
-              <th>Total Rs.</th>
+              <th>Price</th>
+              <th>Total</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+          <tr className="row">
               <td>
                 <input className="cb1" type="checkbox" />
               </td>
               <td>#001</td>
-              <td>10/06/2023</td>
+              <td>01/07/2023</td>
               <td>Customer 1</td>
               <td>Books</td>
               <td>02</td>
-              <td>150</td>
-              <td>300</td>
+              <td>Rs.145.00</td>
+              <td colSpan="2"></td>
+            </tr>
+            <tr>
+              <td colSpan="4"></td>
+              <td>Pens</td>
+              <td>03</td>
+              <td>Rs.35.00</td>
+              <td>Rs.395.00</td>
               <td className="deliver">Delivered</td>
             </tr>
             <tr>
@@ -97,13 +104,39 @@ export default function Sales() {
                 <input className="cb1" type="checkbox" />
               </td>
               <td>#002</td>
-              <td>12/06/2023</td>
+              <td>10/06/2023</td>
               <td>Customer 2</td>
-              <td>Pens</td>
-              <td>10</td>
-              <td>35</td>
-              <td>350</td>
+              <td>Books</td>
+              <td>02</td>
+              <td>Rs.150.00</td>
+              <td>Rs.300.00</td>
               <td className="deliver">Delivered</td>
+            </tr>
+            <tr>
+              <td>
+                <input className="cb1" type="checkbox" />
+              </td>
+              <td>#003</td>
+              <td>01/06/2023</td>
+              <td>Customer 3</td>
+              <td>Books</td>
+              <td>02</td>
+              <td>Rs.150.00</td>
+              <td>Rs.300.00</td>
+              <td className="deliver">Delivered</td>
+            </tr>
+            <tr>
+              <td>
+                <input className="cb1" type="checkbox" />
+              </td>
+              <td>#004</td>
+              <td>11/06/2023</td>
+              <td>Customer 4</td>
+              <td>Books</td>
+              <td>02</td>
+              <td>Rs.150.00</td>
+              <td>Rs.300.00</td>
+              <td className="pending">Pending</td>
             </tr>
           </tbody>
         </table>
