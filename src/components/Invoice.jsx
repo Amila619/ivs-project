@@ -33,14 +33,14 @@ export default function Invoice() {
         <td className='Input1'>
           <span>Customer ID</span>
         </td>
-        <td className='Input2'>
+        <td className='Input3'>
           <input type="text" />
           
         </td>
         <td className='Input1'>
           <span>Customer Name</span>
         </td>
-        <td className='Input2'>
+        <td className='Input3'>
           <input type="text" />
         </td>
       </tr>
@@ -49,7 +49,7 @@ export default function Invoice() {
         <td className='Input1'>
           <span>Status</span>
         </td>
-        <td className='Input2'>
+        <td className='Input3'>
           <input type="text" />
         </td>
       </tr>
@@ -68,14 +68,14 @@ export default function Invoice() {
     </thead>
     <tbody>
       <tr className='row'>
-        <td>#22101</td>
+        <td className='Input3'>#22101</td>
         <td>Atlas CR 40Pg</td>
         <td>02</td>
         <td>Rs.145.00</td>
         <td>Rs.290.00</td>
       </tr>
       <tr className='row'>
-        <td>#22025</td>
+        <td className='Input3'>#22025</td>
         <td>Atlas Blue Pen</td>
         <td>03</td>
         <td>Rs.35.00</td>
@@ -108,4 +108,3 @@ export default function Invoice() {
     
   )
 }
-// End the app
