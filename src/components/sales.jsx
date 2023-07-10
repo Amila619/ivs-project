@@ -1,5 +1,5 @@
 import React from "react";
-import "./category.css";
+import "./sales.css";
 import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
