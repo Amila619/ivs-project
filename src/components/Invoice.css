@@ -34,7 +34,6 @@ form input {
     content: '\25BC';
     position: absolute;
     cursor: pointer;
-    pointer-events: none;
     transition: 25s all ease;
 }
 
