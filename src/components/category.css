@@ -6,7 +6,7 @@
 
 .appContainer{
     border-radius: 24px;
-    padding: 1rem;
+    /* padding: 1rem; */
     background-color: #ffffff;
 }
 
@@ -73,13 +73,14 @@ h3 {
 }
 
 .search{
-    border-bottom: 2px solid #d1c5c5be;
+    /* border-bottom: 2px solid #d1c5c5be; */
+    margin: 35px;
 }
 
 
 #ser1 {
     display: flex;
-    margin: 35px;
+    /* margin: 35px; */
     padding: 0.5rem;
     width: 35%;
     font-size: 15px;
@@ -95,6 +96,18 @@ h3 {
     border: 1px solid #D9D9D9;
     border-radius: 5px;
     outline: 1px;
+}
+
+.search .delete{
+    background-color: #FE1C1C;
+    color: #ffffff;
+    padding: 0.7rem;
+}
+
+.delete #delete-msg{
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight:normal;
 }
 
 .search img {
@@ -114,6 +127,10 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 19rem;
+}
+
+th {
+    border-top: 2px solid #d1c5c5be;
 }
 
 th,

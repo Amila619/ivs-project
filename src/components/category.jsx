@@ -1,14 +1,21 @@
-import React from "react";
-
+import React, { useState } from "react";
 import "./category.css";
 import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
 
-export default function Category({openModal}) {
-
+export default function Category({ openModal }) {
+  const [deletediv, setDeletediv] = useState(false);
   return (
-    <div className="appContainer">
+    <div
+      className="appContainer"
+      onClick={(e) => {
+        if (e.target === "appContainer") {
+          console.log(e.target.value);
+          setDeletediv(false);
+        }
+      }}
+    >
       <div className="appContainer1">
         <div className="h1Container">
           <h3>Categories</h3>
@@ -21,13 +28,22 @@ export default function Category({openModal}) {
             </div>
           </button>
           <button className="btn">
-          <div className="btn-wrapper">
+            <div className="btn-wrapper">
               <img src={Edit} alt="" />
               <span>Update</span>
             </div>
           </button>
           <button className="btn">
-          <div className="btn-wrapper">
+            <div
+              className="btn-wrapper"
+              onClick={() => {
+                if (!deletediv) {
+                  setDeletediv(true);
+                } else {
+                  setDeletediv(false);
+                }
+              }}
+            >
               <img src={Delete} alt="" />
               <span>Delete</span>
             </div>
@@ -35,12 +51,19 @@ export default function Category({openModal}) {
         </div>
       </div>
       <div className="search">
-        <input
-          type="search"
-          id="ser1"
-          name="s1"
-          placeholder="Search Category"
-        />
+        {deletediv && (
+          <div className="delete">
+            <span id="delete-msg">Successfully Deleted</span>
+          </div>
+        )}
+        {!deletediv && (
+          <input
+            type="search"
+            id="ser1"
+            name="s1"
+            placeholder="Search Category"
+          />
+        )}
       </div>
 
       <div className="appContainer2">
