@@ -43,7 +43,7 @@ export default function Sales() {
         />
       </div>
 
-      <div className="appContainer2">
+      <div className="appContainer3">
         <table>
           <thead>
             <tr>
@@ -71,8 +71,8 @@ export default function Sales() {
               <td>Books</td>
               <td>02</td>
               <td>150</td>
-              <th>300</th>
-              <th>Delivered</th>
+              <td>300</td>
+              <td className="deliver">Delivered</td>
             </tr>
             <tr>
               <td>
@@ -84,8 +84,8 @@ export default function Sales() {
               <td>Pens</td>
               <td>10</td>
               <td>35</td>
-              <th>350</th>
-              <th>Delivered</th>
+              <td>350</td>
+              <td className="deliver">Delivered</td>
             </tr>
           </tbody>
         </table>
