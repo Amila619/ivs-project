@@ -47,6 +47,7 @@
   margin: 0.5rem 0.5rem 2rem 0.5rem;
   border: 1px solid #000;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .user-logged{

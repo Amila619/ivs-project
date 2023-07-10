@@ -51,6 +51,7 @@ h3 {
     background-color: #ffffff;
     border-color: #000000;
     border-width: 3px;
+    cursor: pointer;
 }
 
 .btn-wrapper {

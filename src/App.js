@@ -19,6 +19,8 @@ import User from './assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg'
 function App() {
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [disCategory, setDisCategory] = useState(true)
+  const [disSales, setDisSales] = useState(false)
 
   return (
     <div className="App">
@@ -46,7 +48,12 @@ function App() {
             <img src={Items} alt='' />
             <span className='inner-box-text'>Items</span>
           </div>
-          <div className='box-icon'>
+          <div className='box-icon' onClick={() => {
+            setDisCategory(true)
+            if (disSales) {
+              setDisSales(false)
+            }
+          }}>
             <img src={Categories} alt='' />
             <span className='inner-box-text'>Categories</span>
           </div>
@@ -58,15 +65,21 @@ function App() {
             <img src={Customers} alt='' />
             <span className='inner-box-text'>Customers</span>
           </div>
-          <div className='box-icon down'>
+          <div className='box-icon down' onClick={() => {
+            setDisSales(true)
+            if (disCategory) {
+              setDisCategory(false)
+            }
+          }}>
             <img src={SalesIc} alt='' />
             <span className='inner-box-text'>Sales</span>
           </div>
         </div>
         <div className='left-container'>
-          <Category openModal={() => setModalOpen(true)}/>
+          {disCategory && <Category openModal={() => setModalOpen(true)} />}
           {modalOpen && <Modal closeModal={() => setModalOpen(false)} />}
-          {/* <Sales/> */}
+          {disSales && <Sales/>}
+    
         </div>
       </div>
     </div>
