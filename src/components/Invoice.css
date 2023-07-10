@@ -17,14 +17,25 @@
 }
 .Input1{
     padding: 10px;
-    margin: 2cap auto;
+    margin: 2px auto;
 }
 .Input2{
     padding: 10px;
     margin: 20px auto;
 }
+.Input3{
+    padding: 10px;
+    margin: 20px auto;
+}
 form input {
     background-color: #a0bfe0;
+}
+.Input3::after{
+    content: '\25BC';
+    position: absolute;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 25s all ease;
 }
 
 /* 2nd table- Chart */
