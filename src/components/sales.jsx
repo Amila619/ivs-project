@@ -1,10 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import "./sales.css";
 import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
 
 export default function Sales() {
+  const [deletediv, setDeletediv] = useState(false);
   return (
     <div className="appContainer">
       <div className="appContainer1">
@@ -26,7 +28,16 @@ export default function Sales() {
               </div>
             </button>
             <button className="btn">
-              <div className="btn-wrapper">
+              <div
+                className="btn-wrapper"
+                onClick={() => {
+                  if (!deletediv) {
+                    setDeletediv(true);
+                  } else {
+                    setDeletediv(false);
+                  }
+                }}
+              >
                 <img src={Delete} alt="" />
                 <span>Delete</span>
               </div>
@@ -35,12 +46,19 @@ export default function Sales() {
         </div>
       </div>
       <div className="search">
-        <input
-          type="search"
-          id="ser1"
-          name="s1"
-          placeholder="Search Category"
-        />
+        {deletediv && (
+          <div className="delete">
+            <span id="delete-msg">Successfully Deleted</span>
+          </div>
+        )}
+        {!deletediv && (
+          <input
+            type="search"
+            id="ser1"
+            name="s1"
+            placeholder="Search Category"
+          />
+        )}
       </div>
 
       <div className="appContainer3">
