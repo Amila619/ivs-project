@@ -1,9 +1,15 @@
 import React from 'react';
 import './Invoice.css';
 
-export default function Invoice() {
+export default function Invoice({closeInvoice}) {
   return (
-    <div className="appContainer">
+    <div className='app-wrapper'
+    onClick={(e) => {
+      if (e.target.className === "app-wrapper") {
+        closeInvoice();
+      }
+    }}>
+      <div className="appContainer">
 {/* Heading */}
       <div className='appContainer1'>
         <div className='h1Container'>
@@ -99,12 +105,14 @@ export default function Invoice() {
     <br /> <br />
 {/* Button */}
     <div className='btnContainer'>
-        <button type="button"  className='btn'>Print Invoice</button>
-        <button type="button"  className='btn'>Save</button>
+        <button type="button"  className='btn-invoice'>Print Invoice</button>
+        <button type="button"  className='btn-invoice'>Save</button>
     </div>
 
 
   </div>
-    
+
+    </div>
+        
   )
 }
