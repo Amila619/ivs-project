@@ -1,7 +1,7 @@
 import React from "react";
 import "./Modal.css";
 
-export default function Modal({closeModal}) {
+export default function Modal({closeModal, btnTextVal, headingTextVal}) {
   return (
     <div
       className="modal-container"
@@ -13,7 +13,7 @@ export default function Modal({closeModal}) {
     >
       <div className="modal">
         <div className="modal-heading">
-          <h2>Add Category</h2>
+          <h2>{headingTextVal}</h2>
         </div>
         <form>
           <div className="form-group top ">
@@ -33,7 +33,7 @@ export default function Modal({closeModal}) {
             />
           </div>
           <button type="submit" className="btn-add">
-            Add
+            <span>{btnTextVal}</span>
           </button>
         </form>
       </div>

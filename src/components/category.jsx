@@ -4,7 +4,7 @@ import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
 
-export default function Category({ openModal }) {
+export default function Category({ openModal, handleBtnText, handleHeadingText }) {
   const [deletediv, setDeletediv] = useState(false);
   return (
     <div
@@ -21,14 +21,22 @@ export default function Category({ openModal }) {
           <h3>Categories</h3>
         </div>
         <div className="ButtContainer">
-          <button className="btn" onClick={() => openModal()}>
+          <button className="btn" onClick={() => {
+            handleHeadingText("Add Category")
+            handleBtnText("Add")
+            openModal()
+          }}>
             <div className="btn-wrapper">
               <img src={Add} alt="" />
               <span>Add Category</span>
             </div>
           </button>
-          <button className="btn">
-            <div className="btn-wrapper">
+          <button className="btn" onClick={() => {
+            handleHeadingText("Update Category")
+            handleBtnText("Save")
+            openModal()
+          }}>
+            <div className="btn-wrapper" >
               <img src={Edit} alt="" />
               <span>Update</span>
             </div>

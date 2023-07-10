@@ -21,6 +21,8 @@ function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [disCategory, setDisCategory] = useState(true)
   const [disSales, setDisSales] = useState(false)
+  const [btnText, setBtnText] = useState('')
+  const [headingText, setHeadingText] = useState('')
 
   return (
     <div className="App">
@@ -76,8 +78,8 @@ function App() {
           </div>
         </div>
         <div className='left-container'>
-          {disCategory && <Category openModal={() => setModalOpen(true)} />}
-          {modalOpen && <Modal closeModal={() => setModalOpen(false)} />}
+          {disCategory && <Category openModal={() =>setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
+          {modalOpen && <Modal closeModal={() => setModalOpen(false)} btnTextVal={btnText} headingTextVal={headingText}/>}
           {disSales && <Sales/>}
     
         </div>
