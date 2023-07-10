@@ -32,16 +32,13 @@ h3 {
 }
 
 .ButtContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-column: 3;
+    margin: auto;
 }
 
 .btn {
     font-display: inherit;
-    width: 200px;
-    height: 50px;
+    width: 270px;
+    height: 70px;
     margin: 10px;
     border-radius: 10px;
     color: #4955A1;
