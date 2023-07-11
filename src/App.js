@@ -13,12 +13,14 @@ import Menu from './assets/menu_FILL0_wght400_GRAD0_opsz48.svg'
 import Search from './assets/search_FILL0_wght400_GRAD0_opsz48.svg'
 import Bell from './assets/notifications_FILL1_wght400_GRAD0_opsz48.svg'
 import User from './assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg'
+import Invoice from './components/Invoice';
 
 
 
 function App() {
 
   const [modalOpen, setModalOpen] = useState(false);
+  const [invOpen, setInvOpen] = useState(false);
   const [disCategory, setDisCategory] = useState(true)
   const [disSales, setDisSales] = useState(false)
   const [btnText, setBtnText] = useState('')
@@ -78,9 +80,11 @@ function App() {
           </div>
         </div>
         <div className='left-container'>
-          {disCategory && <Category openModal={() =>setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
+          {disCategory && <Category openModal={() => setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
           {modalOpen && <Modal closeModal={() => setModalOpen(false)} btnTextVal={btnText} headingTextVal={headingText}/>}
-          {disSales && <Sales/>}
+          {disSales && <Sales openInvoice={() => setInvOpen(true)}/>}
+          {invOpen && <Invoice closeInvoice={() => setInvOpen(false)} />}
+          {/* <Invoice /> */}
     
         </div>
       </div>

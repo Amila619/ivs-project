@@ -1,81 +1,85 @@
 import React from 'react';
 import './Invoice.css';
 
-export default function Invoice() {
+export default function Invoice({closeInvoice}) {
   return (
-    <div className="appContainer">
+    <div className='app-wrapper'>
+      <div className="appContainer">
 {/* Heading */}
       <div className='appContainer1'>
         <div className='h1Container'>
-          <h1>Make Invoice</h1>
+          <h3>Make Invoice</h3>
         </div>
       </div>
 
 {/* Input Details */}
-<form>
+<div className='inp-table'>
+  <form>
     <table className='form1'>
+      <tbody>
       <tr>
-        <td className='Input1'>
-          <span>Invoice ID</span>
+        <td className='Input'>
+          <span className='input-text'>Invoice ID</span>
         </td>
-        <td className='Input2'>
-          <input type="text"  />
+        <td className='Input'>
+          <input type="text" defaultValue='#001'  className='inp'/>
         </td>
-        <td className='Input1'>
-          <span>Invoice Date</span>
+        <td className='Input'>
+          <span className='input-text'>Invoice Date</span>
         </td>
-        <td className='Input2'>
-          <input type="date" />
+        <td className='Input'>
+          <input type="date" placeholder='01/07/2023' className='inp'/>
         </td>
       </tr>
-
       <tr>
-        <td className='Input1'>
-          <span>Customer ID</span>
+        <td className='Input'>
+          <span className='input-text' >Customer ID</span>
         </td>
-        <td className='Input3'>
-          <input type="text" />
+        <td className='Input'>
+          <input type="text" className='inp' defaultValue='2547215452v'/>
           
         </td>
-        <td className='Input1'>
-          <span>Customer Name</span>
+        <td className='Input'>
+          <span className='input-text' >Customer Name</span>
         </td>
-        <td className='Input3'>
-          <input type="text" />
+        <td className='Input'>
+          <input type="text" className='inp' defaultValue='Customer 1'/>
         </td>
       </tr>
 
       <tr>
-        <td className='Input1'>
-          <span>Status</span>
+        <td className='Input'>
+          <span className='input-text' >Status</span>
         </td>
-        <td className='Input3'>
-          <input type="text" />
+        <td className='Input'>
+          <input type="text" className='inp' defaultValue='Delivered'/>
         </td>
       </tr>
+      </tbody>
     </table>
 </form>
-{/* End The Input Details */}
-<br></br>
+</div>
+
 {/*chart Table Details */}
-  <table className='table'>
-    <thead>
+  <div className='table2'>
+  <table>
+    <tr>
       <th>Product ID</th>
       <th>Item</th>
       <th>Quantity</th>
       <th>Unit Price</th>
       <th>Total Price</th>
-    </thead>
+    </tr>
     <tbody>
-      <tr className='row'>
-        <td className='Input3'>#22101</td>
+      <tr>
+        <td className='Input'>#22101</td>
         <td>Atlas CR 40Pg</td>
         <td>02</td>
         <td>Rs.145.00</td>
         <td>Rs.290.00</td>
       </tr>
-      <tr className='row'>
-        <td className='Input3'>#22025</td>
+      <tr>
+        <td className='Input'>#22025</td>
         <td>Atlas Blue Pen</td>
         <td>03</td>
         <td>Rs.35.00</td>
@@ -83,28 +87,26 @@ export default function Invoice() {
       </tr>
     </tbody>
   </table>
+  </div>
   <br />
 
 {/* Total Amount */}
-<div className='container'>
   <div className='total'>
       
       <span className='text1'>Total Amount</span>
       <span className='text2'>Rs.395.00</span>
       
   </div>
-</div>
-
-    
-    <br /> <br />
 {/* Button */}
     <div className='btnContainer'>
-        <button type="button"  className='btn'>Print Invoice</button>
-        <button type="button"  className='btn'>Save</button>
+        <button type="button"  className='btn-invoice'>Print Invoice</button>
+        <button type="button"  className='btn-invoice' onClick={closeInvoice}>Save</button>
     </div>
 
 
   </div>
-    
+
+    </div>
+        
   )
 }
