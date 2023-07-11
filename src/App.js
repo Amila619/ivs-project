@@ -1,8 +1,13 @@
 import './App.css';
 import { useState } from 'react';
+
+// Importing all the necessary Components
 import Category from './components/category';
 import Sales from './components/sales';
 import Modal from './components/Modal';
+import Invoice from './components/Invoice';
+
+// Importing all the necessary Icons
 import Person from './assets/person_FILL0_wght300_GRAD0_opsz48.svg'
 import Items from './assets/align_items_stretch_FILL0_wght300_GRAD0_opsz48.svg'
 import Categories from './assets/category_FILL0_wght300_GRAD0_opsz48 (1).svg'
@@ -13,7 +18,7 @@ import Menu from './assets/menu_FILL0_wght400_GRAD0_opsz48.svg'
 import Search from './assets/search_FILL0_wght400_GRAD0_opsz48.svg'
 import Bell from './assets/notifications_FILL1_wght400_GRAD0_opsz48.svg'
 import User from './assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg'
-import Invoice from './components/Invoice';
+
 
 
 
