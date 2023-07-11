@@ -29,12 +29,14 @@ function App() {
 
   return (
     <div className="App">
+      {/* Header */}
       <header className="App-header">
         <img src={Menu} alt='' />
         <div className='left-icons-header'>
           <img src={Search} alt='' />
           <img src={Bell} alt='' />
           <img src={User} alt='' />
+          {/* Selection  */}
           <select name='status' className='user-logged'>
             <option value="Thushara Priyadarshana">Thushara Priyadarshana</option>
             <option value="Amila Sandeepa">Amila Sandeepa</option>
@@ -44,6 +46,7 @@ function App() {
         </div>
       </header>
       <div className='main-container'>
+        {/* Side Bar */}
         <div className='right-container'>
           <div className='box-icon top'>
             <img src={Person} alt='' />
@@ -53,6 +56,7 @@ function App() {
             <img src={Items} alt='' />
             <span className='inner-box-text'>Items</span>
           </div>
+          {/* Handle Category Window */}
           <div className='box-icon' onClick={() => {
             setDisCategory(true)
             if (disSales) {
@@ -70,6 +74,7 @@ function App() {
             <img src={Customers} alt='' />
             <span className='inner-box-text'>Customers</span>
           </div>
+          {/* Handle Sales Window */}
           <div className='box-icon down' onClick={() => {
             setDisSales(true)
             if (disCategory) {
@@ -80,7 +85,9 @@ function App() {
             <span className='inner-box-text'>Sales</span>
           </div>
         </div>
+        {/* Main Window for Components to show up */}
         <div className='left-container'>
+          {/* Calliing All the Components */}
           {disCategory && <Category openModal={() => setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
           {modalOpen && <Modal closeModal={() => setModalOpen(false)} btnTextVal={btnText} headingTextVal={headingText}/>}
           {disSales && <Sales openInvoice={() => setInvOpen(true)} handleInvoiceHeadingText={(name) => setInvoiceHeadingText(name)}/>}

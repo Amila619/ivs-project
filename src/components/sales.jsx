@@ -5,36 +5,45 @@ import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
 
-export default function Sales({openInvoice, handleInvoiceHeadingText}) {
+export default function Sales({ openInvoice, handleInvoiceHeadingText }) {
   const [deletediv, setDeletediv] = useState(false);
   return (
     <div className="appContainer">
       <div className="appContainer1">
+        {/* Main Heading */}
         <div className="h1Container">
           <h3> Sales</h3>
         </div>
+        {/* Buttons */}
         <div className="ButtContainer">
           <div className="ButtContainer">
-            <button className="btn" 
-            onClick={() => {
-              handleInvoiceHeadingText("Make Invoice")
-              openInvoice()
-            }} >
+            {/* Function to change Invoice Heading Text */}
+            <button
+              className="btn"
+              onClick={() => {
+                handleInvoiceHeadingText("Make Invoice");
+                openInvoice();
+              }}
+            >
               <div className="btn-wrapper">
                 <img src={Add} alt="" />
                 <span>Add Sale</span>
               </div>
             </button>
-            <button className="btn" 
-            onClick={() => {
-              handleInvoiceHeadingText("Edit Sale")
-              openInvoice()
-            }}>
+            {/* Function to change Invoice Heading Text */}
+            <button
+              className="btn"
+              onClick={() => {
+                handleInvoiceHeadingText("Edit Sale");
+                openInvoice();
+              }}
+            >
               <div className="btn-wrapper">
                 <img src={Edit} alt="" />
                 <span>Edit</span>
               </div>
             </button>
+            {/* Function to Handle Delete popup */}
             <button className="btn">
               <div
                 className="btn-wrapper"
@@ -53,6 +62,7 @@ export default function Sales({openInvoice, handleInvoiceHeadingText}) {
           </div>
         </div>
       </div>
+      {/* Delete and Search Section */}
       <div className="search">
         {deletediv && (
           <div className="delete">
@@ -68,7 +78,7 @@ export default function Sales({openInvoice, handleInvoiceHeadingText}) {
           />
         )}
       </div>
-
+      {/* Sales Table */}
       <div className="appContainer3">
         <table>
           <thead>
@@ -87,7 +97,7 @@ export default function Sales({openInvoice, handleInvoiceHeadingText}) {
             </tr>
           </thead>
           <tbody>
-          <tr className="row">
+            <tr className="row">
               <td>
                 <input className="cb1" type="checkbox" />
               </td>

@@ -12,9 +12,11 @@ export default function Modal({closeModal, btnTextVal, headingTextVal}) {
       }}
     >
       <div className="modal">
+        {/* Heading */}
         <div className="modal-heading">
           <h2>{headingTextVal}</h2>
         </div>
+        {/* Input Fields */}
         <form>
           <div className="form-group top ">
             <label className="input-label">ID</label>
@@ -32,6 +34,7 @@ export default function Modal({closeModal, btnTextVal, headingTextVal}) {
               className="customer-text"
             />
           </div>
+          {/* Button */}
           <button type="submit" className="btn-add">
             <span>{btnTextVal}</span>
           </button>
