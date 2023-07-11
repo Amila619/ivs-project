@@ -83,7 +83,8 @@ function App() {
           {disCategory && <Category openModal={() => setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
           {modalOpen && <Modal closeModal={() => setModalOpen(false)} btnTextVal={btnText} headingTextVal={headingText}/>}
           {disSales && <Sales openInvoice={() => setInvOpen(true)}/>}
-          {invOpen && <Invoice closeInvoice={() => setInvOpen(false)}/>}
+          {invOpen && <Invoice closeInvoice={() => setInvOpen(false)} />}
+          {/* <Invoice /> */}
     
         </div>
       </div>
