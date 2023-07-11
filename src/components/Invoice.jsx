@@ -28,31 +28,31 @@ export default function Invoice({closeInvoice}) {
           <span className='input-text'>Invoice Date</span>
         </td>
         <td className='Input'>
-          <input type="date" className='inp'/>
+          <input type="date" placeholder='01/07/2023' className='inp'/>
         </td>
       </tr>
       <tr>
         <td className='Input'>
-          <span className='input-text'>Customer ID</span>
+          <span className='input-text' >Customer ID</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp'/>
+          <input type="text" className='inp' defaultValue='2547215452v'/>
           
         </td>
         <td className='Input'>
-          <span className='input-text'>Customer Name</span>
+          <span className='input-text' >Customer Name</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp'/>
+          <input type="text" className='inp' defaultValue='Customer 1'/>
         </td>
       </tr>
 
       <tr>
         <td className='Input'>
-          <span className='input-text'>Status</span>
+          <span className='input-text' >Status</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp'/>
+          <input type="text" className='inp' defaultValue='Delivered'/>
         </td>
       </tr>
       </tbody>
