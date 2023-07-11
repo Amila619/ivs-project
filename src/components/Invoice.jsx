@@ -36,14 +36,14 @@ export default function Invoice({closeInvoice}) {
           <span className='input-text' >Customer ID</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp' defaultValue='2547215452v'/>
+          <input type="text" className='inp iarrow' defaultValue='2547215452v'/>
           
         </td>
         <td className='Input'>
           <span className='input-text' >Customer Name</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp' defaultValue='Customer 1'/>
+          <input type="text" className='inp iarrow' defaultValue='Customer 1'/>
         </td>
       </tr>
 
@@ -52,7 +52,7 @@ export default function Invoice({closeInvoice}) {
           <span className='input-text' >Status</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp' defaultValue='Delivered'/>
+          <input type="text" className='inp deliver iarrow' defaultValue='Delivered'/>
         </td>
       </tr>
       </tbody>
@@ -63,31 +63,33 @@ export default function Invoice({closeInvoice}) {
 {/*chart Table Details */}
   <div className='table2'>
   <table>
-    <tr>
-      <th>Product ID</th>
-      <th>Item</th>
-      <th>Quantity</th>
-      <th>Unit Price</th>
-      <th>Total Price</th>
-    </tr>
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
     <tbody>
       <tr>
-        <td className='Input'>#22101</td>
-        <td>Atlas CR 40Pg</td>
+        <td className='Input iarrow'>#22101</td>
+        <td className='Input iarrow'>Atlas CR 40Pg</td>
         <td>02</td>
         <td>Rs.145.00</td>
         <td>Rs.290.00</td>
       </tr>
       <tr>
-        <td className='Input'>#22025</td>
-        <td>Atlas Blue Pen</td>
+        <td className='Input iarrow'>#22025</td>
+        <td className='Input iarrow'>Atlas Blue Pen</td>
         <td>03</td>
         <td>Rs.35.00</td>
         <td>Rs.105.00</td>
       </tr>
     </tbody>
   </table>
-  </div>
+</div>
   <br />
 
 {/* Total Amount */}

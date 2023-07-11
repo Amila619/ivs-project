@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:wght@300;700&display=swap');
 
-.app-wrapper{
+.app-wrapper {
     position: fixed;
     background-color: rgb(0, 0, 0, 0);
     top: 11.5%;
     width: 90%;
     height: 99%;
 }
-.appContainer{
+
+.appContainer {
     border-radius: 24px;
     background-color: #ffffff;
     font-family: Poppins;
     height: 780px;
     width: 100%;
 }
+
 /* Heading */
-.appContainer1{
+.appContainer1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0.5rem;
@@ -23,20 +25,24 @@
 }
 
 /* 1st table - Enter Details */
-    .inp-table{
-        margin: 1rem;
-    }    
-    .inp-table .form1 tr{
-        text-align: left;
-        border: none;
-    }
- .form1{
+.inp-table {
+    margin: 1rem;
+}
+
+.inp-table .form1 tr {
+    text-align: left;
+    border: none;
+}
+
+.form1 {
     width: 100%;
 }
-.Input{
+
+.Input {
     padding: 0.5rem;
 }
-.inp{
+
+.inp {
     border: none;
     outline: none;
     border-radius: 5px;
@@ -48,42 +54,47 @@
     width: 100%;
 }
 
-.input-text{
+.input-text {
     /* text-align: left; */
     font-size: 20px;
-    
+
 }
-/* .Input3::after{
+
+.iarrow::after{
     content: '\25BC';
     position: absolute;
     cursor: pointer;
     transition: 25s all ease;
-} */ */
+}
+
 
 /* 2nd table- Chart */
-.table2{
+.table2 {
     width: 100%;
-    
+
 }
-.table2 table{
+
+.table2 table {
     width: 98%;
     margin: auto;
     border-collapse: collapse;
-    text-align: center ;
+    text-align: center;
     border: 1px solid #000;
     font-size: 18px;
 }
-.table2 tr{
+
+.table2 tr {
     border: 1px solid #000;
 }
 
-.table2 th{
-    padding:0.5rem;
+.table2 th {
+    padding: 0.5rem;
     font-family: Poppins;
     font-weight: 300;
 }
+
 /* Total amount */
-.total{
+.total {
     /* width: 27%;
     position: relative;
     bottom: 0%;
@@ -95,16 +106,18 @@
     gap: 1rem;
     /* width: 20%; */
     margin-left: 810px;
-    border: 1px  solid #000 ;
+    border: 1px solid #000;
     font-weight: bold;
-    
+
 }
-.text1, .text2{
+
+.text1,
+.text2 {
     padding: 1rem 2.5rem 1rem 1rem;
 }
 
 /* Button */
-.btnContainer{
+.btnContainer {
     /* width: 500px; */
     display: inline-flex;
     justify-content: space-around;
@@ -112,7 +125,8 @@
     gap: 6rem;
     margin: 2rem 0 2rem 44rem;
 }
-.btn-invoice{
+
+.btn-invoice {
     font-display: inherit;
     width: 150px;
     height: 40px;
@@ -134,5 +148,3 @@
     background-color: #ffffff;
     color: #4955A1;
 }
-
-
