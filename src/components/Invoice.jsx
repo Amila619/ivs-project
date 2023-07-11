@@ -36,14 +36,13 @@ export default function Invoice({closeInvoice}) {
           <span className='input-text' >Customer ID</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp iarrow' defaultValue='2547215452v'/>
-          
+          <input type="text" className='inp' defaultValue='2547215452v'/>
         </td>
         <td className='Input'>
           <span className='input-text' >Customer Name</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp iarrow' defaultValue='Customer 1'/>
+          <input type="text" className='inp' defaultValue='Customer 1'/>
         </td>
       </tr>
 
@@ -52,7 +51,7 @@ export default function Invoice({closeInvoice}) {
           <span className='input-text' >Status</span>
         </td>
         <td className='Input'>
-          <input type="text" className='inp deliver iarrow' defaultValue='Delivered'/>
+          <input type="text" className='inp deliver' defaultValue='Delivered'/>
         </td>
       </tr>
       </tbody>
