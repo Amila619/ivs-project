@@ -1,14 +1,14 @@
 import React from 'react';
 import './Invoice.css';
 
-export default function Invoice({closeInvoice}) {
+export default function Invoice({closeInvoice, invHeadingText}) {
   return (
     <div className='app-wrapper'>
       <div className="appContainer">
 {/* Heading */}
       <div className='appContainer1'>
         <div className='h1Container'>
-          <h3>Make Invoice</h3>
+          <h3>{invHeadingText}</h3>
         </div>
       </div>
 

@@ -25,6 +25,7 @@ function App() {
   const [disSales, setDisSales] = useState(false)
   const [btnText, setBtnText] = useState('')
   const [headingText, setHeadingText] = useState('')
+  const [invoiceHeadingText, setInvoiceHeadingText] = useState('')
 
   return (
     <div className="App">
@@ -82,9 +83,8 @@ function App() {
         <div className='left-container'>
           {disCategory && <Category openModal={() => setModalOpen(true)} handleBtnText={(name) => setBtnText(name)} handleHeadingText={(name) => setHeadingText(name)}/>}
           {modalOpen && <Modal closeModal={() => setModalOpen(false)} btnTextVal={btnText} headingTextVal={headingText}/>}
-          {disSales && <Sales openInvoice={() => setInvOpen(true)}/>}
-          {invOpen && <Invoice closeInvoice={() => setInvOpen(false)} />}
-          {/* <Invoice /> */}
+          {disSales && <Sales openInvoice={() => setInvOpen(true)} handleInvoiceHeadingText={(name) => setInvoiceHeadingText(name)}/>}
+          {invOpen && <Invoice closeInvoice={() => setInvOpen(false)} invHeadingText={invoiceHeadingText}/>}
     
         </div>
       </div>

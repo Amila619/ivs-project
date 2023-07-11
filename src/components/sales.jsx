@@ -5,7 +5,7 @@ import Add from "../assets/add_FILL0_wght400_GRAD0_opsz48.svg";
 import Edit from "../assets/edit_FILL0_wght400_GRAD0_opsz48.svg";
 import Delete from "../assets/delete_FILL0_wght400_GRAD0_opsz48.svg";
 
-export default function Sales({openInvoice}) {
+export default function Sales({openInvoice, handleInvoiceHeadingText}) {
   const [deletediv, setDeletediv] = useState(false);
   return (
     <div className="appContainer">
@@ -15,14 +15,22 @@ export default function Sales({openInvoice}) {
         </div>
         <div className="ButtContainer">
           <div className="ButtContainer">
-            <button className="btn" onClick={openInvoice}>
+            <button className="btn" 
+            onClick={() => {
+              handleInvoiceHeadingText("Make Invoice")
+              openInvoice()
+            }} >
               <div className="btn-wrapper">
                 <img src={Add} alt="" />
                 <span>Add Sale</span>
               </div>
             </button>
-            <button className="btn">
-              <div className="btn-wrapper" onClick={openInvoice}>
+            <button className="btn" 
+            onClick={() => {
+              handleInvoiceHeadingText("Edit Sale")
+              openInvoice()
+            }}>
+              <div className="btn-wrapper">
                 <img src={Edit} alt="" />
                 <span>Edit</span>
               </div>
